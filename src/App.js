@@ -41,37 +41,10 @@ import { EditFood } from "./components/Admin/EditFood/EditFood";
 import { AddFoods } from "./components/Admin/AddFood/AddFoods";
 import { AdminResponsiveAppBar } from "./components/Admin/Admin Nav/adminpages";
 
-export const API = "http://localhost:5000";
+export const API = "https://my-capston-1.herokuapp.com/";
 function App() {
 
-  // const [auth,setauth]=React.useState(false)
-  // const [auth1,setauth1]=React.useState(false)
-
-  // const Auth = async () => {
-  //   try {
-  //     const res = await fetch(`${API}/auth`, {
-  //       method: "GET",
-  //       headers: {
-  //         Accept: "application/json",
-  //         "Content-Type": "application/json",
-  //       },
-  //       credentials: "include",
-  //     });
-  //     if (res.status === 200) {
-  //       setauth(true);
-  //     } else {
-  //       console.log("err da");
-  //     }
-  //     // if (Auth.status === 401) {
-  //     //   setauth(false);
-  //     // }
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-
-
-// useEffect(()=>{Auth()},[auth1])
+  
 
 
   return (
