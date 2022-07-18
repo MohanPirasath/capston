@@ -41,7 +41,7 @@ import { EditFood } from "./components/Admin/EditFood/EditFood";
 import { AddFoods } from "./components/Admin/AddFood/AddFoods";
 import { AdminResponsiveAppBar } from "./components/Admin/Admin Nav/adminpages";
 
-export const API = "https://my-capston-1.herokuapp.com/";
+export const API = "https://my-capston-1.herokuapp.com";
 function App() {
 
   
