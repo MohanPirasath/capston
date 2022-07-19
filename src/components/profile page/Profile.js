@@ -37,7 +37,7 @@ export function Profile() {
           </tr>
           <tr cellspacing="0">
             <th cellspacing="0">Address :</th>
-            <td cellspacing="0">{datas.address} 36 words allowed</td>
+            <td cellspacing="0">{datas.address} </td>
           </tr>
         </table>
       </div>
