@@ -24,7 +24,9 @@ export function Makeorder({ name, notes, id, img }) {
             margin: "0",
           }}
         >
+          {/* CardMedia is used to display the image */}
           <CardMedia component="img" height="194" image={img} alt={name} />
+          {/* CardContent is used to display the content */}
           <CardContent>
             <Typography variant="h6" component="div">
               Variant: {name}

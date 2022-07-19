@@ -14,6 +14,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 
+// this pages will display inside the navbar and setting will display inside the righten side more button
 const pages = ["RequestToken", "PendingToken"];
 const settings = ["Profile", "Dashboard", "Logout"];
 export const ResponsiveAppBar = () => {

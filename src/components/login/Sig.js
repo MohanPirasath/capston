@@ -13,7 +13,7 @@ export function Sig() {
   const navigate = useNavigate();
 
  
-
+// this function will call when the sigin Button get"s hitten
   const Insubmit = async (event) => {
     const fet = await fetch(`${API}/sigin`, {
       method: "POST",
@@ -34,7 +34,7 @@ export function Sig() {
       navigate("/Dashboard");
     }
   };
-
+// formvalidationSchema is used to validate the forms 
   const formvalidationSchema = yup.object({
     temuser: yup.string().required("UserName is required ⚠️"),
 

@@ -1,29 +1,11 @@
 // import logo from './logo.svg';
 import "./App.css";
 
-
-
-
-
-import {
-  Routes,
-  Route,
-  Link,
-  Navigate,
-} from "react-router-dom";
-
-
-import CardHeader from "@mui/material/CardHeader";
-
-
-
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 
 import React, { useEffect } from "react";
 import useState from "react";
 
-
-
-import { Cookies } from "react-cookie";
 import { Login } from "./components/signup/Login";
 import { Sig } from "./components/login/Sig";
 import { Dashboard } from "./components/Dashboard components/Dashboard";
@@ -40,103 +22,71 @@ import { Foods } from "./components/Admin/Foods/Foods";
 import { EditFood } from "./components/Admin/EditFood/EditFood";
 import { AddFoods } from "./components/Admin/AddFood/AddFoods";
 import { AdminResponsiveAppBar } from "./components/Admin/Admin Nav/adminpages";
+import { Notfound } from "./components/Notfound/Notfound";
 
 export const API = "https://my-capston-1.herokuapp.com";
 function App() {
-
-  
-
-
   return (
     <div className="App">
       <div className="container">
+        {/* Routes & Route is used to change the pages dynamically. According to the path */}
         <Routes>
           <Route path="/signup" element={<Login />} />
           <Route path="Admin" element={<Admin />} />
-          <Route path="Sigin" element={<Sig  />} />
+          <Route path="Sigin" element={<Sig />} />
           <Route
             path="Dashboard"
-            element={[
-              <ResponsiveAppBar /> ,<Dashboard  />
-              ]}
-           
+            element={[<ResponsiveAppBar />, <Dashboard />]}
           />
           <Route
             path="RequestToken"
-            element={[
-            <ResponsiveAppBar />, <RequestToken />
-            
-            ]}
+            element={[<ResponsiveAppBar />, <RequestToken />]}
           />
 
           <Route
             path="PendingToken"
-            element={[
-            <ResponsiveAppBar /> ,<PendingToken />
-            ]}
+            element={[<ResponsiveAppBar />, <PendingToken />]}
           />
-          <Route path="profile" element={[
-          
-          <ResponsiveAppBar /> ,<Profile />
-          ]} />
+          <Route path="profile" element={[<ResponsiveAppBar />, <Profile />]} />
           <Route path="Logout" element={<Logout />} />
-          {/* <Route path="*" element={<Navigate replace to="/" />} /> */}
+          <Route path="Notfound" element={<Notfound />} />
+          <Route path="*" element={<Navigate replace to="/Notfound" />} />
           <Route path="/" element={<Navigate replace to="/signup" />} />
-          {/* <Route path="/Dashboard/Dashboard" element={<Navigate replace to="/Dashboard" />} /> */}
 
           <Route
             path="Admindashboard"
-            element={[
-          <AdminResponsiveAppBar />, <Admindashboard />
-          ]}
+            element={[<AdminResponsiveAppBar />, <Admindashboard />]}
           />
           <Route
             path="Foods"
-            element={[
-          <AdminResponsiveAppBar /> ,<Foods />
-          ]}
+            element={[<AdminResponsiveAppBar />, <Foods />]}
           />
           <Route
             path="AcceptedToken"
             element={[
               <AdminResponsiveAppBar />,
-              <AdmindashboardAcceptedToken />
+              <AdmindashboardAcceptedToken />,
             ]}
           />
           <Route
             path="RejectedToken"
             element={[
               <AdminResponsiveAppBar />,
-              <AdmindashboardrejectedToken />
+              <AdmindashboardrejectedToken />,
             ]}
           />
           <Route
             path="Foods/AddFoods"
-            element={[
-            <AdminResponsiveAppBar /> ,<AddFoods />
-            ]}
+            element={[<AdminResponsiveAppBar />, <AddFoods />]}
           />
           <Route
             path="Foods/edit/:id"
-            element={[
-            <AdminResponsiveAppBar />,<EditFood />
-            ]}
+            element={[<AdminResponsiveAppBar />, <EditFood />]}
           />
         </Routes>
       </div>
     </div>
   );
 }
-
-// function RequiredToken({ auth,children }) {
-//   // const token = Cookies.get("token");
-//   if(!auth){
-//     return <Navigate replace to="/sigin" />;
-//   }
-  // return children
-  // console.log("token for react", token);
-
-  // return auth ? children : <Navigate replace to="/sigin" />;
-// }
 
 export default App;

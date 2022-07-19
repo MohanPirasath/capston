@@ -42,7 +42,7 @@ export function AdmindashboardacceptedTokenlist({
               Ordered at {date} on
               {time}
               <br />
-              This Token has been Rejected.
+              This Token has been generated Successfully.
             </Typography>
           </CardContent>
           <CardActions disableSpacing>

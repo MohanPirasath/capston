@@ -16,7 +16,7 @@ import { API } from "../../App";
 
 export function Login() {
   const navigate = useNavigate();
-
+  // formvalidate is used to validate the form 
   const formvalidate = yup.object({
     temuser: yup
       .string()
@@ -92,7 +92,22 @@ export function Login() {
 
   return (
     <div className="login">
+      <div className="signin">
+        <h3>
+          Already signup?   <span>
+            <Button variant="contained"
+            onClick={() => {
+              navigate("/Sigin");
+            }}
+            sx={{ marginBottom: "2%" }}
+            >signin</Button>
+          </span>
+        </h3>
+      </div>
       <div className="login-btns">
+        <div>
+
+        </div>
         <Fab
           variant="extended,contained"
           color="success"

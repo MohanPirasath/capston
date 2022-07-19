@@ -9,6 +9,7 @@ import { API } from "../../../App";
 
 
 export function AdminpendingToken({ name, notes, date, time, username, id, img }) {
+  // Randomid will create the token id for the Accepted tokens 
   const Randomid = Math.floor(Math.random() * (2000 - 100 + 1)) + 2000;
 
   return (

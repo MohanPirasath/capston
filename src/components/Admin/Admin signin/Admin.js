@@ -57,6 +57,18 @@ export function Admin() {
 
   return (
     <div className="admin">
+       <div className="signin">
+        <h3>
+          Users signin?   <span>
+            <Button variant="contained"
+            onClick={() => {
+              navigate("/Sigin");
+            }}
+            sx={{ marginBottom: "2%" }}
+            >signin</Button>
+          </span>
+        </h3>
+      </div>
       <div className="login-btns">
         <Fab
           variant="extended,contained"

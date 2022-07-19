@@ -21,7 +21,9 @@ export function DisplayavaliableTokens({
             margin: "0",
           }}
         >
+          {/* CardMedia which helpes to display the image of the foods */}
           <CardMedia component="img" height="194" image={img} alt={name} />
+          {/* CardContent which helpes us to display the Content */}
           <CardContent>
             <Typography variant="h6" component="div">
               UserName:{username}

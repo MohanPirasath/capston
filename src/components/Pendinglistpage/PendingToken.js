@@ -7,7 +7,7 @@ export function PendingToken() {
 
   const [datas, setdatas] = React.useState([]);
   const [re, setre] = React.useState("kk");
-
+// fetching the data from api
   useEffect(() => {
     fetch(`${API}/getpendingTokens`)
       .then((data) => data.json())
@@ -20,7 +20,7 @@ export function PendingToken() {
   }, [re]);
 
   const yours = [];
-
+// fillitering the datas which is belong to the current user
   datas.map((e) => {
     if (e.username === userName) {
       yours.push(e);
@@ -39,7 +39,7 @@ export function PendingToken() {
           </h3>
           You can find the pending tokens here.
         </div>
-
+{/* displaying the data by using DisplaypendingTokens */}
         {yours.map((e) => {
           return (
             <div>

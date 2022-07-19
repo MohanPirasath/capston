@@ -23,7 +23,9 @@ export function DisplaypendingTokens({ name, notes, date, time, username, id, im
               margin: "0",
             }}
           >
+            {/* CardMedia is used to display the image */}
             <CardMedia component="img" height="194" image={img} alt={name} />
+            {/* CardContent is used to display the Content */}
             <CardContent>
               <Typography variant="h6" component="div">
                 UserId:{username}

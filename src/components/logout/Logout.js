@@ -4,6 +4,7 @@ import { API } from "../../App";
 
 export function Logout() {
   const navigate = useNavigate();
+  // this function get call once u get in to the logout page it removes the token and make you to logout
   const logout = async () => {
     try {
       const res = await fetch(`${API}/logout`, {

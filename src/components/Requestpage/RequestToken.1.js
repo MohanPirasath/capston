@@ -5,8 +5,8 @@ import { Makeorder } from "./Makeorder.1";
 export function RequestToken() {
   const [orderfood, setfoods] = React.useState([]);
   const userName = localStorage.getItem("username");
-
   const [re, setre] = React.useState("k");
+  // fetching the data from API
   useEffect(() => {
     fetch(`${API}/getfoods`)
       .then((data) => data.json())
@@ -22,6 +22,7 @@ export function RequestToken() {
         </h3>
         You can Order food here.
       </div>
+      {/* Maping and displaying the food items which are avaliable  */}
       {orderfood.map((e) => {
         return (
           <div>

@@ -8,7 +8,7 @@ import { API } from "../../../App";
 
 export function AddFoods() {
   const navigate = useNavigate();
-
+  // formvalidationSchema  is used to validate the forms
   const formvalidationSchema = yup.object({
     foodname: yup.string().required("Food name is required ⚠️"),
     foodnote: yup.string().required("Notes is required ⚠️"),
@@ -26,7 +26,7 @@ export function AddFoods() {
       Addfood(values);
     },
   });
-
+// this function get call onces the add button getten click 
   const Addfood = async (event) => {
     try {
       const fet = await fetch(`${API}/addnewfood`, {

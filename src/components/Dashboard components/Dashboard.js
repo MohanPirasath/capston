@@ -1,8 +1,11 @@
+import { display } from "@mui/system";
 import React, { useEffect } from "react";
 import { API } from "../../App";
 import { DisplayavaliableTokens } from "./DisplayavaliableTokens.1";
 
 export function Dashboard() {
+
+
   const userName = localStorage.getItem("username");
 
 
@@ -10,6 +13,7 @@ export function Dashboard() {
   const [datas, setdatas] = React.useState([]);
   const [re, setre] = React.useState("kk");
 
+// fetching the datas from the api to display the token which has been generated
   useEffect(() => {
     fetch(`${API}/acceptedTokens`)
       .then((data) => data.json())
@@ -22,7 +26,7 @@ export function Dashboard() {
   
 
   const yours = [];
-
+// maping and fillerting the data which is depended on specific user
   datas.map((e) => {
     if (e.username === userName) {
       yours.push(e);
@@ -42,6 +46,7 @@ export function Dashboard() {
         You's avaliable food tokens will display here.
       </div>
       <div>
+        {/* Maping the data which is belong to the certain user and displaying by using the DisplayavaliableTokens component */}
         {yours.map((data) => {
           return (
             <div className="makereverse">
