@@ -82,7 +82,7 @@ export function Login() {
       if (fet.status === 400 || !fet || fet.status === 404) {
         window.alert("Try New Username");
       } else {
-        window.alert("successful login");
+        window.alert("successfully signup");
         navigate("/Sigin");
       }
     } catch (err) {
